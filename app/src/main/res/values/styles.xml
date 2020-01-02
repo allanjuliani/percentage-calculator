@@ -1,0 +1,19 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Top Bar -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Top Bar Icons -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Input/Button color -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- Input text color -->
+        <item name="android:editTextColor">@color/colorText</item>
+        <!-- Input line color -->
+        <item name="colorControlNormal">@color/colorSecondaryLight</item>
+        <!-- Input/Button color -->
+        <item name="android:textColor">@color/colorText</item>
+        <!-- BG -->
+        <item name="android:colorBackground">@color/colorSecondary</item>
+        <item name="colorError">#F44336</item>
+    </style>
+</resources>
