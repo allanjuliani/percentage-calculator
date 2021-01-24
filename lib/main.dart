@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.blueAccent[200],
       ),
       home: CalcPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

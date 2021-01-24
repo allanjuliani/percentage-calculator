@@ -180,6 +180,8 @@ class CalcState extends State<CalcPage> {
 
   doTheMath() {
     var math;
+    var math_formated;
+    var text;
 
     log('value1: $value1');
     log('value2: $value2');
@@ -188,28 +190,34 @@ class CalcState extends State<CalcPage> {
     if (value1 == 0 && value2 > 0 && value3 > 0) {
       log('if 1');
       math = (value2*value3)/100;
-      input1.text = prettyPrint(math).toString();
-      //mathReturn.text =  "$math is $value2 percent of $value3";
+      math_formated = math.toStringAsFixed(2);
+      input1.text = math_formated;
+
       setState(() {
-        entries.add("$math is $value2 percent of $value3");
+        text = "$math_formated is $value2 percent of $value3";
+        entries.insert(0, text);
       });
 
     } else if (value1 > 0 && value2 == 0 && value3 > 0) {
       log('if 2');
       math = (value1/value3)*100;
-      input2.text = prettyPrint(math).toString();
-      //mathReturn.text =  "$value1 is $math percent of $value3";
+      math_formated = math.toStringAsFixed(2);
+      input2.text = math_formated;
+
       setState(() {
-        entries.add("$value1 is $math percent of $value3");
+        text = "$value1 is " + math.toStringAsFixed(2) + " percent of $value3";
+        entries.insert(0, text);
       });
 
     } else if (value1 > 0 && value2 > 0 && value3 == 0) {
       log('if 3');
       math = (value1/value2)*100;
-      input3.text = prettyPrint(math).toString();
-      //mathReturn.text =  "$value1 is $value2 percent of $math";
+      math_formated = math.toStringAsFixed(2);
+      input3.text = math_formated;
+
       setState(() {
-        entries.add("$value1 is $value2 percent of $math");
+        text = "$value1 is $value2 percent of $math";
+        entries.insert(0, text);
       });
 
     }  else  {
