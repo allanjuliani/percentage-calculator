@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:developer';
+// import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CalcPage extends StatefulWidget {
   CalcPage({Key key}) : super(key: key);
@@ -28,7 +30,7 @@ class CalcState extends State<CalcPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Percentage Calculator'),
+        title: Text(AppLocalizations.of(context).percentageCalculator),
       ),
 
       body: Form(
@@ -60,7 +62,7 @@ class CalcState extends State<CalcPage> {
                       if (input3.text != "") value3 = double.parse(input3.text);
                     },
                   ),
-                  hintText: 'Type a number',
+                  hintText: AppLocalizations.of(context).typeNumber,
                   labelText: 'X is',
                 ),
                 keyboardType: TextInputType.number,
@@ -97,7 +99,7 @@ class CalcState extends State<CalcPage> {
                       if (input3.text != "") value3 = double.parse(input3.text);
                     },
                   ),
-                  hintText: 'Type a number',
+                  hintText: AppLocalizations.of(context).typeNumber,
                   labelText: 'X %',
                 ),
                 keyboardType: TextInputType.number,
@@ -134,7 +136,7 @@ class CalcState extends State<CalcPage> {
                       if (input3.text != "") value3 = double.parse(input3.text);
                     },
                   ),
-                  hintText: 'Type a number',
+                  hintText: AppLocalizations.of(context).typeNumber,
                   labelText: 'of X',
                 ),
                 keyboardType: TextInputType.number,

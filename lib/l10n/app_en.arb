@@ -1,0 +1,10 @@
+{
+  "percentageCalculator": "Percentage Calculator",
+  "@percentageCalculator": {
+    "description": "App title"
+  },
+  "typeNumber": "Type a number",
+  "@typeNumber": {
+    "description": "Type a number"
+  }
+}
