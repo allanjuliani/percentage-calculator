@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora de Porcentagem</string>
+    <string name="send">Enviar</string>
+    <string name="x">x %</string>
+    <string name="x_is">x é</string>
+    <string name="of_x">de x</string>
+    <string name="initial_message">Você deve deixar apenas um campo limpo</string>
+    <string name="clear">Clear</string>
+    <string name="result">%s é %s porcento de %s</string>
+</resources>

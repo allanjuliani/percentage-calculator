@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Percentage Calculator</string>
+    <string name="send">Send</string>
+    <string name="x">x %</string>
+    <string name="x_is">x is</string>
+    <string name="of_x">of x</string>
+    <string name="initial_message">You should leave just one field clean</string>
+    <string name="clear">Clear</string>
+    <string name="result">%s is %s percent of %s</string>
+
+</resources>
