@@ -1,4 +1,9 @@
 {
   "percentageCalculator": "Calculadora de Porcentagem",
-  "typeNumber": "Digite um número"
+  "typeNumber": "Digite um número",
+  "xis": "X é",
+  "x": "X %",
+  "ofx": "de X",
+  "iss": "é",
+  "percentOf": "% de"
 }

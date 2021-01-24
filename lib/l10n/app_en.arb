@@ -6,5 +6,25 @@
   "typeNumber": "Type a number",
   "@typeNumber": {
     "description": "Type a number"
+  },
+  "xis": "X is",
+  "@xis": {
+    "description": "X is"
+  },
+  "x": "X %",
+  "@x": {
+    "description": "X %"
+  },
+  "ofx": "of X",
+  "@ofx": {
+    "description": "of X"
+  },
+  "iss": "is",
+  "@iss": {
+    "description": "is"
+  },
+  "percentOf": "% of",
+  "@percentOf": {
+    "description": "percent of"
   }
 }

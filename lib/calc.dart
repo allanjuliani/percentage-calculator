@@ -67,7 +67,7 @@ class CalcState extends State<CalcPage> {
                     },
                   ),
                   hintText: AppLocalizations.of(context).typeNumber,
-                  labelText: 'X is',
+                  labelText: AppLocalizations.of(context).xis,
                 ),
                 keyboardType: TextInputType.number,
                 onChanged: (String value) {
@@ -104,7 +104,7 @@ class CalcState extends State<CalcPage> {
                     },
                   ),
                   hintText: AppLocalizations.of(context).typeNumber,
-                  labelText: 'X %',
+                  labelText: AppLocalizations.of(context).x,
                 ),
                 keyboardType: TextInputType.number,
                 onChanged: (String value) {
@@ -141,7 +141,7 @@ class CalcState extends State<CalcPage> {
                     },
                   ),
                   hintText: AppLocalizations.of(context).typeNumber,
-                  labelText: 'of X',
+                  labelText: AppLocalizations.of(context).ofx,
                 ),
                 keyboardType: TextInputType.number,
                 onChanged: (String value) {
@@ -168,7 +168,7 @@ class CalcState extends State<CalcPage> {
                       setState(() {
                         entries.removeAt(index);
                       });
-                      Scaffold.of(context).showSnackBar(SnackBar(content: Text("$item dismissed")));
+                      //Scaffold.of(context).showSnackBar(SnackBar(content: Text("$item dismissed")));
                     },
                     //background: Container(color: Colors.red),
                     child: Center(
@@ -188,10 +188,15 @@ class CalcState extends State<CalcPage> {
     var math;
     var mathFormatted;
     var text;
+    var iss;
+    var percentOf;
 
     log('value1: $value1');
     log('value2: $value2');
     log('value3: $value3');
+
+    iss = AppLocalizations.of(context).iss;
+    percentOf = AppLocalizations.of(context).percentOf;
 
     if (value1 == 0 && value2 > 0 && value3 > 0) {
       log('if 1');
@@ -200,7 +205,7 @@ class CalcState extends State<CalcPage> {
       input1.text = mathFormatted;
 
       setState(() {
-        text = "$mathFormatted is $value2 percent of $value3";
+        text = "$mathFormatted $iss $value2$percentOf $value3";
         entries.insert(0, text);
       });
 
@@ -211,7 +216,7 @@ class CalcState extends State<CalcPage> {
       input2.text = mathFormatted;
 
       setState(() {
-        text = "$value1 is " + math.toStringAsFixed(2) + " percent of $value3";
+        text = "$value1 $iss $mathFormatted$percentOf $value3";
         entries.insert(0, text);
       });
 
@@ -222,11 +227,11 @@ class CalcState extends State<CalcPage> {
       input3.text = mathFormatted;
 
       setState(() {
-        text = "$value1 is $value2 percent of $math";
+        text = "$value1 $iss $value2$percentOf $math";
         entries.insert(0, text);
       });
 
-    }  else  {
+    } else {
       log('else');
       //mathReturn.text =  "value1: $value1 - value2:$value2 - value3:$value3";
       //mathReturn.text =  "";
