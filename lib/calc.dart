@@ -30,6 +30,10 @@ class CalcState extends State<CalcPage> {
 
     return Scaffold(
       appBar: AppBar(
+        //brightness: Brightness.dark, // status bar brightness
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
         title: Text(AppLocalizations.of(context).percentageCalculator),
       ),
 
@@ -166,7 +170,7 @@ class CalcState extends State<CalcPage> {
                       });
                       Scaffold.of(context).showSnackBar(SnackBar(content: Text("$item dismissed")));
                     },
-                    background: Container(color: Colors.red),
+                    //background: Container(color: Colors.red),
                     child: Center(
                         heightFactor: 3,
                         child: Text('${entries[index]}')
@@ -182,7 +186,7 @@ class CalcState extends State<CalcPage> {
 
   doTheMath() {
     var math;
-    var math_formated;
+    var mathFormatted;
     var text;
 
     log('value1: $value1');
@@ -192,19 +196,19 @@ class CalcState extends State<CalcPage> {
     if (value1 == 0 && value2 > 0 && value3 > 0) {
       log('if 1');
       math = (value2*value3)/100;
-      math_formated = math.toStringAsFixed(2);
-      input1.text = math_formated;
+      mathFormatted = math.toStringAsFixed(2);
+      input1.text = mathFormatted;
 
       setState(() {
-        text = "$math_formated is $value2 percent of $value3";
+        text = "$mathFormatted is $value2 percent of $value3";
         entries.insert(0, text);
       });
 
     } else if (value1 > 0 && value2 == 0 && value3 > 0) {
       log('if 2');
       math = (value1/value3)*100;
-      math_formated = math.toStringAsFixed(2);
-      input2.text = math_formated;
+      mathFormatted = math.toStringAsFixed(2);
+      input2.text = mathFormatted;
 
       setState(() {
         text = "$value1 is " + math.toStringAsFixed(2) + " percent of $value3";
@@ -214,8 +218,8 @@ class CalcState extends State<CalcPage> {
     } else if (value1 > 0 && value2 > 0 && value3 == 0) {
       log('if 3');
       math = (value1/value2)*100;
-      math_formated = math.toStringAsFixed(2);
-      input3.text = math_formated;
+      mathFormatted = math.toStringAsFixed(2);
+      input3.text = mathFormatted;
 
       setState(() {
         text = "$value1 is $value2 percent of $math";
