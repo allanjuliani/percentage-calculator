@@ -1,4 +1,6 @@
-# percentage_calculator
+# Percentage Calculator
+
+[Play Store](https://play.google.com/store/apps/details?id=me.juliani.allan.porcentagecalc)
 
 Percentage Calculator
 
