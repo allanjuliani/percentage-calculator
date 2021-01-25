@@ -26,5 +26,9 @@
   "percentOf": "% of",
   "@percentOf": {
     "description": "percent of"
+  },
+  "cleanSome": "Clean some field do make the math",
+  "@cleanSome": {
+    "description": "Clean some field do make the math"
   }
 }
